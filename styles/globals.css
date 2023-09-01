@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+   * {
+      @apply outline-none;
+   }
+   body {
+      @apply h-screen bg-black text-white;
+   }
+
+   /* Tab Component styles */
+   .tab {
+      @apply text-lg w-full !border rounded;
+   }
+
+   .tab-list {
+      @apply flex items-center !border-b border-red-500 !p-1;
+   }
+
+   .tab-item {
+      @apply px-6 py-1.5 rounded-sm cursor-pointer transition-colors duration-75 select-none;
+   }
+
+   .tab-item.active {
+      @apply bg-white text-black;
+   }
+
+   .tab-panels {
+      @apply !p-2 h-[28vh];
+   }
+
+   .tab-panel {
+      @apply h-full;
+   }
+}
